@@ -1,0 +1,137 @@
+@extends('layout.main')
+
+@section('content')
+
+<main>
+@include('sections.page-header', [
+    'title' => $sermon['title'],
+    'breadcrumb' => 'sermon details'
+])
+
+    <!-- Page Sermons Single Start -->
+    <div class="page-sermons-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Sermons Single Content Start -->
+                    <div class="sermons-single-content">
+                        <!-- YouTube Video Player Start -->
+                        <div class="sermons-video-player wow fadeInUp">
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px;">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/{{ $sermon['youtube_id'] }}" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        <!-- YouTube Video Player End -->
+
+                        <!-- Sermons Entry Content Start -->
+                        <div class="sermons-entry">
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Sermon Notes:-</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Join us for an inspiring sermon on "{{ $sermon['title'] }}." Discover how embracing faith can transform your life, guiding you towards a path of purpose, fulfillment, and joy. Through powerful scripture, heartfelt worship, and practical teachings, we will explore how to let go of past burdens, adopt a Christ-centered mindset, and live in alignment with God's plan. Whether you're seeking a fresh start or deeper spiritual growth, this sermon will provide the encouragement and tools you need to embark on a transformative journey. Come and experience the blessings of a renewed life in Christ.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">Discover how faith can transform your life. Learn to let go of past burdens, embrace a Christ-centered mindset, and live in alignment with God's plan. Experience the blessings of a renewed life in Christ.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.6s">where we explore the profound impact of embracing faith in Christ. This sermon is designed to guide you through the process of letting go of past burdens and adopting a Christ-centered mindset, helping you to align your life with God's divine plan. Through engaging scripture, heartfelt worship, and practical teachings, you'll learn how to navigate life's challenges with a renewed sense of purpose and joy. Whether you're seeking a fresh start, deeper spiritual growth, or simply a more fulfilling path, this message will provide the tools and inspiration you need. Our community is dedicated to supporting each other on this journey, fostering an environment of love, support, and spiritual enrichment. Experience the peace, joy, and fulfillment that come from living a life renewed in faith. Don't miss this opportunity to start anew and discover the incredible blessings that await you in a Christ-centered life. Come and be a part of this life-changing experience. Are you feeling weighed down by the burdens of your past? Do you yearn for a fresh start and a new direction in life? Join us for an enlightening and transformative sermon titled "{{ $sermon['title'] }}," where we delve into the remarkable journey of spiritual renewal and rediscovery through faith in Christ. This sermon will provide you with the tools and insights needed to embrace a new way of living, centered on the teachings and love of Jesus Christ.</p>
+                        </div>
+                        <!-- Sermons Entry Content End -->
+
+                        <!-- Sermons Social Sharing Start  -->
+                        <div class="sermons-social-sharing wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="sermons-social-sharing-title">
+                                <h3>Share This Sermon :</h3>
+                            </div>
+                            <div class="sermons-social-sharing-list">
+                                <ul>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="https://youtu.be/{{ $sermon['youtube_id'] }}" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Sermons Social Sharing End  -->
+                    </div>
+                    <!-- Sermons Single Content End -->
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Sermons Sidebar Start -->
+                    <div class="sermons-sidebar wow fadeInUp" data-wow-delay="0.25s">
+                        <!-- About Sermons Sidebar Start -->
+                        <div class="about-sermons-sidebar">
+                            <!-- About Sermons Title Start -->
+                            <div class="about-sermons-title">
+                                <h3>about the sermon</h3>
+                            </div>
+                            <!-- About Sermons Title End -->
+
+                            <!-- About Sermons Item Start -->
+                            <div class="about-sermons-item">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div class="about-sermons-content">
+                                    <h3>sermon from </h3>
+                                    <p>{{ $sermon['preacher'] }}</p>
+                                </div>
+                            </div>
+                            <!-- About Sermons Item End -->
+
+                            <!-- About Sermons Item Start -->
+                            <div class="about-sermons-item">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-tag"></i>
+                                </div>
+                                <div class="about-sermons-content">
+                                    <h3>categories</h3>
+                                    <p>{{ $sermon['category'] }}</p>
+                                </div>
+                            </div>
+                            <!-- About Sermons Item End -->
+
+                            <!-- About Sermons Item Start -->
+                            <div class="about-sermons-item">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+                                <div class="about-sermons-content">
+                                    <h3>date & time</h3>
+                                    <p>{{ $sermon['date'] }} - on {{ $sermon['time'] }}</p>
+                                </div>
+                            </div>
+                            <!-- About Sermons Item End -->
+                        </div>
+                        <!-- About Sermons Sidebar End -->
+
+                        <!-- Related Sermons Start -->
+                        @if(count($relatedSermons) > 0)
+                        <div class="related-sermons-sidebar" style="margin-top: 30px;">
+                            <div class="about-sermons-title">
+                                <h3>More Sermons</h3>
+                            </div>
+                            @foreach($relatedSermons as $related)
+                            <div class="related-sermon-item" style="margin-bottom: 15px; padding: 15px; background: var(--secondary-color); border-radius: 8px;">
+                                <a href="{{ route('live.show', $related['id']) }}" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+                                    <img src="{{ asset('assets/images/' . $related['image']) }}" alt="{{ $related['title'] }}" style="width: 80px; height: 60px; object-fit: cover; object-position: top center; border-radius: 5px;">
+                                    <div>
+                                        <h4 style="font-size: 14px; color: var(--primary-color); margin: 0 0 5px 0; line-height: 1.3;">{{ Str::limit($related['title'], 40) }}</h4>
+                                        <p style="font-size: 12px; color: var(--text-color); margin: 0;">{{ $related['preacher'] }}</p>
+                                    </div>
+                                </a>
+                            </div>
+                            @endforeach
+                        </div>
+                        @endif
+                        <!-- Related Sermons End -->
+                    </div>
+                    <!-- Sermons Sidebar End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Sermons Single End -->
+     
+@endsection

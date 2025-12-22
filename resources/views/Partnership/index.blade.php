@@ -1,0 +1,293 @@
+@extends('layout.main')
+
+@section('content')
+
+<main>
+@include('sections.page-header', [
+    'title' => 'Partnership',
+    'breadcrumb' => 'partnership',
+    'backgroundImage' => 'hero2.jpg'
+])
+
+    <!-- Page Ministry Single Start -->
+    <div class="page-ministry-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Ministry Single Content Start -->
+                    <div class="ministry-single-content">
+                        <!-- Ministry Single Slider Start -->
+                        <div class="ministry-single-slider">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <!-- Ministry Image Slide Start -->
+                                    <div class="swiper-slide">
+                                        <div class="ministry-slider-image">
+                                            <figure class="image-anime">
+                                                <img src="{{ asset('assets/images/ministries-img-1.jpg') }}" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <!-- Ministry Image Slide End -->
+
+                                    <!-- Ministry Image Slide Start -->
+                                    <div class="swiper-slide">
+                                        <div class="ministry-slider-image">
+                                            <figure class="image-anime">
+                                                <img src="{{ asset('assets/images/ministries-img-2.jpg') }}" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <!-- Ministry Image Slide End -->
+
+                                    <!-- Ministry Image Slide Start -->
+                                    <div class="swiper-slide">
+                                        <div class="ministry-slider-image">
+                                            <figure class="image-anime">
+                                                <img src="{{ asset('assets/images/ministries-img-3.jpg') }}" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <!-- Ministry Image Slide End -->
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <!-- Ministry Single Slider End -->
+
+                        <!-- Ministry Entry Content Start -->
+                        <div class="ministry-entry">
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Welcome to Children's Ministry!</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Welcome to our Children's Ministry, where we nurture the spiritual growth of our youngest members in a fun and engaging environment. Our programs are designed to teach children about the love of Jesus through interactive Bible stories, worship, crafts, and games. We aim to create a safe and welcoming space where children can develop their faith, make new friends, and build a strong foundation in Christian values. Our dedicated team of volunteers is passionate about guiding each child on their spiritual journey. Join us and let your child experience the joy and excitement of learning about God's love!</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">Kids learn about Jesus through interactive Bible stories, worship, crafts, and games. Our dedicated volunteers provide a safe space for children to grow in faith, make friends, and build a foundation in Christian values.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.6s">Whether it's through Sunday School, Vacation Bible School, or special events throughout the year, our goal is to support and inspire each child to grow closer to God and to understand His immense love for them. Join us and watch your child thrive in a community that celebrates their unique gifts and encourages their spiritual growth.</p>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Children's Ministry Features</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.8s">Our Children's Ministry offers interactive Bible stories, spirited worship, creative crafts, and fun games in a safe, faith-building environment.</p>
+                            <ul class="wow fadeInUp" data-wow-delay="1s">
+                                <li>Interactive Stories</li>
+                                <li>Spirited Worship</li>
+                                <li>Creative Crafts</li>
+                                <li>Exciting Games</li>
+                                <li>Dedicated Volunters</li>
+                                <li>Safe Environment</li>
+                                <li>Faith Development</li>
+                                <li>Friendship Building</li>
+                            </ul>
+
+                            <!-- Ministry Entry Image Start -->
+                            <div class="ministry-entry-image">
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <!-- Ministry Entry Image Start -->
+                                        <div class="ministry-entry-img-1">
+                                            <figure class="image-anime reveal">
+                                                <img src="{{ asset('assets/images/ministry-entry-img-1.jpg') }}" alt="">
+                                            </figure>
+                                        </div>
+                                        <!-- Ministry Entry Image End -->
+                                    </div>
+
+                                    <div class="col-md-6 col-12">
+                                        <!-- Ministry Entry Image Start -->
+                                        <div class="ministry-entry-img-2">
+                                            <figure class="image-anime reveal">
+                                                <img src="{{ asset('assets/images/ministry-entry-img-2.jpg') }}" alt="">
+                                            </figure>
+                                        </div>
+                                        <!-- Ministry Entry Image End -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ministry Entry Image End -->
+                        </div>
+                        <!-- Ministry Entry Content End -->
+
+                        <!-- Ministry Single Faqs Start -->
+                        <div class="ministry-single-faqs">
+                            <!-- Section Title Start -->
+                            <div class="section-title">
+                                <h2 class="text-anime-style-2" data-cursor="-opaque">Our Core Value</h2>
+                            </div>
+                            <!-- Section Title End -->
+
+                            <!-- Core Value FAQ Accordion Start -->
+                            <div class="core-value-faqs-accordion" id="accordion">
+                                <!-- FAQ Item Start -->
+                                <div class="accordion-item wow fadeInUp">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Why is faith a core value?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            <p>We demonstrate love through compassionate ministry, supportive relationships, and inclusive community practices.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item End -->
+
+                                <!-- FAQ Item Start -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.25s">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            How does the church demonstrate love?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            <p>We demonstrate love through compassionate ministry, supportive relationships, and inclusive community practices.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item End -->
+
+                                <!-- FAQ Item Start -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            How is community fostered within the church?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            <p>We demonstrate love through compassionate ministry, supportive relationships, and inclusive community practices.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item End -->
+
+                                <!-- FAQ Item Start -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.75s">
+                                    <h2 class="accordion-header" id="headingfour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                            What is the importance of spiritual growth?
+                                        </button>
+                                    </h2>
+                                    <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour"
+                                        data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            <p>We demonstrate love through compassionate ministry, supportive relationships, and inclusive community practices.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item End -->
+
+                                <!-- FAQ Item Start -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay="1s">
+                                    <h2 class="accordion-header" id="headingfive">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                            How do these values shape church activities?
+                                        </button>
+                                    </h2>
+                                    <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive"
+                                        data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            <p>We demonstrate love through compassionate ministry, supportive relationships, and inclusive community practices.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item End -->
+                            </div>
+                            <!-- Core Value FAQ Accordion End -->
+                        </div>
+                        <!-- Ministry Single Faqs End -->
+                    </div>
+                    <!-- Ministry Single Content End -->
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Ministry Single Sidebar Start -->
+                    <div class="ministry-single-sidebar wow fadeInUp" data-wow-delay="0.25s">
+                        <!-- Ministry Single Box Start -->
+                        <div class="ministry-single-box">
+                            <!-- Ministry Single Info Start -->
+                            <div class="ministry-single-info">
+                                <div class="icon-box">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <div class="ministry-single-info-content">
+                                    <h3>meeting times</h3>
+                                </div>
+                            </div>
+                            <!-- Ministry Single Info End -->
+
+                            <!-- Ministry Single Info List Start -->
+                            <div class="ministry-single-info-list">
+                                <ul>
+                                    <li>Tuesdays, 12:30pm - 3:00pm</li>
+                                    <li>Thursdays, 9:00am - 11:00am</li>
+                                </ul>
+                            </div>
+                            <!-- Ministry Single Info List End -->
+                        </div>
+                        <!-- Ministry Single Box End -->
+                         
+                        <!-- Ministry Single Box Start -->
+                        <div class="ministry-single-box">
+                            <!-- Ministry Single Info Start -->
+                            <div class="ministry-single-info">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+                                <div class="ministry-single-info-content">
+                                    <h3>schedule</h3>
+                                </div>
+                            </div>
+                            <!-- Ministry Single Info End -->
+
+                            <!-- Ministry Single Info List Start -->
+                            <div class="ministry-single-info-list">
+                                <ul>
+                                    <li>10:00 AM - Welcome kids and playtime</li>
+                                    <li>10:20 AM - Worship</li>
+                                    <li>10:35 AM - Large group lesson</li>
+                                    <li>11:00 AM - Age group split off</li>
+                                    <li>11:45 AM - Closing time</li>
+                                </ul>
+                            </div>
+                            <!-- Ministry Single Info List End -->
+                        </div>
+                        <!-- Ministry Single Box End -->
+
+                        <!-- Ministry Single Box Start -->
+                        <div class="ministry-single-box">
+                            <!-- Ministry Single Info Start -->
+                            <div class="ministry-single-info">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="ministry-single-info-content">
+                                    <h3>location</h3>
+                                </div>
+                            </div>
+                            <!-- Ministry Single Info End -->
+
+                            <!-- Ministry Single Info List Start -->
+                            <div class="ministry-single-info-list">
+                                <ul>
+                                    <li>Lorem ipsum is a placeholder text commonly used to demonstrate</li>
+                                </ul>
+                            </div>
+                            <!-- Ministry Single Info List End -->
+                        </div>
+                        <!-- Ministry Single Box End -->
+                    </div>
+                    <!-- Ministry Single Sidebar End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Service Single End -->
+</main>
+
+@endsection
+
