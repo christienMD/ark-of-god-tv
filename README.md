@@ -20,8 +20,19 @@ cd ark-of-god-tv
 composer install
 npm install
 
+# Regenerate autoloader (important for helper functions)
+composer dump-autoload
+
 # Copy environment file
 cp .env.example .env
+
+# Configure your database in .env file
+# DB_CONNECTION=mysql
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=your_database_name
+# DB_USERNAME=your_username
+# DB_PASSWORD=your_password
 
 # Generate application key
 php artisan key:generate
@@ -38,6 +49,53 @@ npm run build
 # Start the server
 php artisan serve
 ```
+
+## Troubleshooting
+
+### Error: "Call to undefined function content_image()"
+
+**Solution:** Run the autoloader regeneration:
+```bash
+composer dump-autoload
+```
+
+### Error: "Class 'finfo' not found"
+
+**Cause:** PHP `fileinfo` extension is not enabled (required for file uploads).
+
+**Solution:**
+
+**Windows (XAMPP/WAMP):**
+1. Open `php.ini` (usually `C:\xampp\php\php.ini`)
+2. Find `;extension=fileinfo`
+3. Remove the semicolon: `extension=fileinfo`
+4. Restart Apache
+
+**Mac (Homebrew):**
+```bash
+# Edit php.ini
+nano /opt/homebrew/etc/php/8.4/php.ini
+# Uncomment: extension=fileinfo
+```
+
+**Linux:**
+```bash
+sudo apt-get install php8.4-fileinfo
+sudo systemctl restart apache2
+```
+
+**Verify installation:**
+```bash
+php -m | grep fileinfo
+```
+
+### Error: Database connection issues
+
+Make sure you've:
+1. Created the MySQL database
+2. Updated `.env` with correct credentials
+3. Run `php artisan migrate`
+4. Run `php artisan db:seed --class=PageContentSeeder`
 
 ## Admin Panel
 
