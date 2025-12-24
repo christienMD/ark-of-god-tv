@@ -10,8 +10,10 @@ class PageContentSeeder extends Seeder
     /**
      * Run the database seeds.
      * 
-     * Auto-generated from database on 2025-12-24 18:53:50
-     * Command: php artisan page-content:export-seeder
+     * This seeder populates the page_contents table with all website content.
+     * To regenerate after admin changes: php artisan page-content:export-seeder
+     * 
+     * Last updated: 2025-12-24 18:53:50
      */
     public function run(): void
     {
