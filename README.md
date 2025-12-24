@@ -1,59 +1,99 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Ark of God TV - AGCOM Ministry Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A Laravel-based website for Ark of God Covenant Ministry (AGCOM) featuring dynamic content management through Filament admin panel.
 
-## About Laravel
+## Tech Stack
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Framework:** Laravel 11
+- **Admin Panel:** Filament 4
+- **Database:** MySQL
+- **Frontend:** Blade Templates with Bootstrap
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Installation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+# Clone the repository
+git clone <repository-url>
+cd ark-of-god-tv
 
-## Learning Laravel
+# Install dependencies
+composer install
+npm install
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+# Copy environment file
+cp .env.example .env
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# Generate application key
+php artisan key:generate
 
-## Laravel Sponsors
+# Run migrations
+php artisan migrate
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# Seed the database with page content
+php artisan db:seed --class=PageContentSeeder
 
-### Premium Partners
+# Build assets
+npm run build
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+# Start the server
+php artisan serve
+```
 
-## Contributing
+## Admin Panel
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Access the admin panel at `/admin` to manage:
+- **Page Contents** - Edit text, images, and videos for all website sections
+- **Blogs** - Manage blog posts
+- **Branches** - Manage ministry branches
+- **Lives** - Manage live stream content
+- **Events** - Manage ministry events
 
-## Code of Conduct
+## Custom Artisan Commands
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Export Page Content to Seeder
 
-## Security Vulnerabilities
+After making changes to page content in the admin panel, you can export the current database state to the seeder file for version control:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+php artisan page-content:export-seeder
+```
+
+This command:
+- Reads all `PageContent` records from the database
+- Generates a new `PageContentSeeder.php` file
+- Preserves all your admin panel changes in code
+- Allows you to commit content changes to version control
+
+**Use case:** When you or a client updates content via the admin panel and you want to sync those changes to your codebase for deployment to other environments.
+
+## Pages with Dynamic Content
+
+The following pages are connected to the admin panel:
+
+| Page | Sections |
+|------|----------|
+| **Home** | Hero, Scrolling Ticker, About, Join Worship, Our Counter, Our Mission, Our Services, Service Ticker, Our Ministries, Our Sermons, Verse Church, CTA Box, Our Event, Donate Now, Our Blog, Subscribe Newsletter |
+| **Live** | Hero (with video controls) |
+| **About** | About Us, Vision Mission, Counter, What We Do, Our Team, Pastor's Message, Core Values |
+| **Events** | Page Header, Featured Event, FAQs, Sidebar |
+| **Branches** | Page Header |
+| **Partnership** | Page Header, Why Partner, Impact Areas, Seed in Action, Giving Channels, Bank Transfers, Mobile Money, FAQs |
+
+## Content Helper Functions
+
+Use these helper functions in Blade templates to retrieve dynamic content:
+
+```php
+// Get a text field
+content('page_slug', 'section_slug', 'field_name', 'default value')
+
+// Get an image URL
+content_image('page_slug', 'section_slug', 'field_name', 'default.jpg')
+
+// Check if a section is active
+section_active('page_slug', 'section_slug')
+```
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is proprietary software for Ark of God Covenant Ministry.

@@ -5,8 +5,8 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">worship with us</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Join us at <span>8am GMT +1</span></h2>
+                        <h3 class="wow fadeInUp">{{ content('home', 'join_worship', 'subtitle', 'worship with us') }}</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">{{ content('home', 'join_worship', 'title', 'Join us at 8am GMT +1') }}</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -29,8 +29,8 @@
                         <div class="highlighted-worship-body">
                             <!-- Highlighted Worship Content Start -->
                             <div class="highlighted-worship-content">
-                                <h3>corporate worship</h3>
-                                <p>Join believers from all nations in powerful worship and communion.</p>
+                                <h3>{{ content('home', 'join_worship', 'featured_title', 'corporate worship') }}</h3>
+                                <p>{{ content('home', 'join_worship', 'featured_description', 'Join believers from all nations in powerful worship and communion.') }}</p>
                             </div>
                             <!-- Highlighted Worship Content End -->
                             <div class="highlighted-worship-btn">
@@ -59,8 +59,8 @@
                             <div class="worship-body">
                                 <!-- Worship Content Start -->
                                 <div class="worship-content">
-                                    <h3>healing & deliverance</h3>
-                                    <p>Experience God's healing power and freedom from bondage.</p>
+                                    <h3>{{ content('home', 'join_worship', 'card_1_title', 'healing & deliverance') }}</h3>
+                                    <p>{{ content('home', 'join_worship', 'card_1_description', 'Experience God\'s healing power and freedom from bondage.') }}</p>
                                 </div>
                                 <!-- Worship Content End -->
 
@@ -90,8 +90,8 @@
                             <div class="worship-body">
                                 <!-- Worship Content Start -->
                                 <div class="worship-content">
-                                    <h3>intercessory prayer</h3>
-                                    <p>Deep intercession and breakthrough prayer encounters.</p>
+                                    <h3>{{ content('home', 'join_worship', 'card_2_title', 'intercessory prayer') }}</h3>
+                                    <p>{{ content('home', 'join_worship', 'card_2_description', 'Deep intercession and breakthrough prayer encounters.') }}</p>
                                 </div>
                                 <!-- Worship Content End -->
 
@@ -121,8 +121,8 @@
                             <div class="worship-body">
                                 <!-- Worship Content Start -->
                                 <div class="worship-content">
-                                    <h3>praise & worship</h3>
-                                    <p>Fervent praise and heartfelt worship in spirit and truth.</p>
+                                    <h3>{{ content('home', 'join_worship', 'card_3_title', 'praise & worship') }}</h3>
+                                    <p>{{ content('home', 'join_worship', 'card_3_description', 'Fervent praise and heartfelt worship in spirit and truth.') }}</p>
                                 </div>
                                 <!-- Worship Content End -->
 

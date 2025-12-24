@@ -14,8 +14,8 @@
                     <div class="event-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">up coming event</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Faith and Fellowship <span>Festival</span></h2>
+                            <h3 class="wow fadeInUp">{{ content('home', 'our_event', 'subtitle', 'up coming event') }}</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">{{ content('home', 'our_event', 'title', 'Faith and Fellowship Festival') }}</h2>
                         </div>
                         <!-- Section Title End -->
 
@@ -27,7 +27,7 @@
                                     <i class="fa-solid fa-calendar-days"></i>
                                 </div>
                                 <div class="event-item-content">
-                                    <p>Aug 03, 2024 - 8:00 am - 5:00 pm</p>
+                                    <p>{{ content('home', 'our_event', 'date_time', 'Aug 03, 2024 - 8:00 am - 5:00 pm') }}</p>
                                 </div>
                             </div>
                             <!-- Event Item End -->
@@ -38,7 +38,7 @@
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                                 <div class="event-item-content">
-                                    <p>AGCOM Cathedral, Bokwango, Buea, Cameroon</p>
+                                    <p>{{ content('home', 'our_event', 'location', 'AGCOM Cathedral, Bokwango, Buea, Cameroon') }}</p>
                                 </div>
                             </div>
                             <!-- Event Item End -->
@@ -47,13 +47,13 @@
 
                         <!-- Event Footer Start -->
                         <div class="event-footer">
-                            <p class="wow fadeInUp" data-wow-delay="0.5s">The Faith and Fellowship Festival is a vibrant celebration featuring worship, community activities, and fellowship. Enjoy inspiring sermons, engaging workshops, and fun for all ages, fostering spiritual growth and connection.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s">{{ content('home', 'our_event', 'description', 'The Faith and Fellowship Festival is a vibrant celebration featuring worship, community activities, and fellowship. Enjoy inspiring sermons, engaging workshops, and fun for all ages, fostering spiritual growth and connection.') }}</p>
                         </div>
                         <!-- Event Footer End -->
 
                         <!-- Event Btn Start -->
                         <div class="event-btn wow fadeInUp" data-wow-delay="0.75s">
-                            <a href="#" class="btn-default">join in person</a>
+                            <a href="{{ route('events') }}" class="btn-default">{{ content('home', 'our_event', 'button_text', 'join in person') }}</a>
                         </div>
                         <!-- Event Btn End -->
                     </div>

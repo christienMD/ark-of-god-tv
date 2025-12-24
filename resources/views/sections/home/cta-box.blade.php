@@ -7,7 +7,7 @@
                     <div class="cta-box-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Get Involved and Stay Connected: Support Our Mission and Join Our Community Today!</h2>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">{{ content('home', 'cta_box', 'title', 'Get Involved and Stay Connected: Support Our Mission and Join Our Community Today!') }}</h2>
                         </div>
                         <!-- Section Title End -->
                     </div>
@@ -17,7 +17,7 @@
                 <div class="col-md-3">
                     <!-- CTA Box Btn Start -->
                     <div class="cta-box-btn wow fadeInUp">
-                        <a href="#" class="btn-default btn-highlighted">join group</a>
+                        <a href="{{ route('contact') }}" class="btn-default btn-highlighted">{{ content('home', 'cta_box', 'button_text', 'join group') }}</a>
                     </div>
                     <!-- CTA Box Btn End -->
                 </div>

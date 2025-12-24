@@ -4,8 +4,8 @@
             <div class="row section-row">
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h3 class="wow fadeInUp">our sermons</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque">Our Latest <span>Sermons</span></h2>
+                    <h3 class="wow fadeInUp">{{ content('home', 'our_sermons', 'subtitle', 'our sermons') }}</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">{{ content('home', 'our_sermons', 'title', 'Our Latest Sermons') }}</h2>
                 </div>
                 <!-- Section Title End -->
             </div>

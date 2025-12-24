@@ -18,13 +18,13 @@
                     <div class="about-image">
                         <div class="about-img-1">
                             <figure class="image-anime reveal">
-                                <img src="{{ asset('assets/images/about-us-img-1.jpg') }}" alt="">
+                                <img src="{{ content_image('about', 'about_us', 'image_1', 'about-us-img-1.jpg') }}" alt="">
                             </figure>
                         </div>
 
                         <div class="about-img-2">
                             <figure class="image-anime reveal">
-                                <img src="{{ asset('assets/images/about-us-img-2.jpg') }}" alt="">
+                                <img src="{{ content_image('about', 'about_us', 'image_2', 'about-us-img-2.jpg') }}" alt="">
                             </figure>
                         </div>
                     </div>
@@ -36,10 +36,10 @@
                     <div class="about-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">about us</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Faith, hope, and love in <span>action every day</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">We are a vibrant community of believers dedicated to worship, fellowship, and service. Our mission is to share God's love, grow in faith, and make a positive impact in the world through compassionate outreach and meaningful connections.</p>
-                            <p class="wow fadeInUp" data-wow-delay="0.5s">Our church is a welcoming place where everyone can find support, inspiration, and a sense of belonging. Together, we strive to live out our faith and make a difference.</p>
+                            <h3 class="wow fadeInUp">{{ content('about', 'about_us', 'subtitle', 'about us') }}</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">{!! content('about', 'about_us', 'title', 'Faith, hope, and love in <span>action every day</span>') !!}</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">{{ content('about', 'about_us', 'description_1', 'We are a vibrant community of believers dedicated to worship, fellowship, and service. Our mission is to share God\'s love, grow in faith, and make a positive impact in the world through compassionate outreach and meaningful connections.') }}</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s">{{ content('about', 'about_us', 'description_2', 'Our church is a welcoming place where everyone can find support, inspiration, and a sense of belonging. Together, we strive to live out our faith and make a difference.') }}</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -51,7 +51,7 @@
                                     <img src="{{ asset('assets/images/icon-about-list-1.svg') }}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>share god's love</h3>
+                                    <h3>{{ content('about', 'about_us', 'feature_1', 'share god\'s love') }}</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -62,7 +62,7 @@
                                     <img src="{{ asset('assets/images/icon-about-list-2.svg') }}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>foster spiritual growth</h3>
+                                    <h3>{{ content('about', 'about_us', 'feature_2', 'foster spiritual growth') }}</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -73,7 +73,7 @@
                                     <img src="{{ asset('assets/images/icon-about-list-3.svg') }}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>serve our community</h3>
+                                    <h3>{{ content('about', 'about_us', 'feature_3', 'serve our community') }}</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -84,7 +84,7 @@
                                     <img src="{{ asset('assets/images/icon-about-list-4.svg') }}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>build strong relationships</h3>
+                                    <h3>{{ content('about', 'about_us', 'feature_4', 'build strong relationships') }}</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -105,8 +105,8 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">vision mission</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Building Faithful Community Through Love, Service, <span>Worship, and Fellowship.</span></h2>
+                        <h3 class="wow fadeInUp">{{ content('about', 'vision_mission', 'main_subtitle', 'vision mission') }}</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">{!! content('about', 'vision_mission', 'main_title', 'Building Faithful Community Through Love, Service, <span>Worship, and Fellowship.</span>') !!}</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -118,13 +118,13 @@
 					<div class="vision-mission-nav wow fadeInUp" data-wow-delay="0.25s">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button" role="tab" aria-selected="true">our vision</button>
+                              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button" role="tab" aria-selected="true">{{ content('about', 'vision_mission', 'vision_subtitle', 'our vision') }}</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mission" type="button" role="tab" aria-selected="false">our mission</button>
+                              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#mission" type="button" role="tab" aria-selected="false">{{ content('about', 'vision_mission', 'mission_subtitle', 'our mission') }}</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#approach" type="button" role="tab" aria-selected="false">our approach</button>
+                              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#approach" type="button" role="tab" aria-selected="false">{{ content('about', 'vision_mission', 'approach_subtitle', 'our approach') }}</button>
                             </li>
                         </ul>
 					</div>
@@ -140,15 +140,15 @@
                                     <div class="vision-mission-content">
                                         <!-- Section Title Start -->
                                         <div class="section-title">
-                                            <h3 class="wow fadeInUp">our vision</h3>
-                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Our Vision to Serve, <span>Love, and Grow</span></h2>
+                                            <h3 class="wow fadeInUp">{{ content('about', 'vision_mission', 'vision_subtitle', 'our vision') }}</h3>
+                                            <h2 class="text-anime-style-2" data-cursor="-opaque">{!! content('about', 'vision_mission', 'vision_title', 'Our Vision to Serve, <span>Love, and Grow</span>') !!}</h2>
                                         </div>
                                         <!-- Section Title End -->
 
                                         <!-- Vision Mission Body Start -->
                                         <div class="vision-mission-body">
-                                            <h3 class="wow fadeInUp" data-wow-delay="0.25s">Our vision is to share God's love, foster spiritual growth, and serve our community with compassion and purpose.</h3>
-                                            <p class="wow fadeInUp" data-wow-delay="0.5s">Our vision is to serve our community with compassion, love unconditionally, and foster spiritual growth. Through dedicated service, heartfelt worship, and supportive fellowship, we strive to create a nurturing environment where individuals can deepen their faith, connect with others, and make a positive impact. Join us as we live out our commitment to serve, love, and grow together.</p>
+                                            <h3 class="wow fadeInUp" data-wow-delay="0.25s">{{ content('about', 'vision_mission', 'vision_headline', 'Our vision is to share God\'s love, foster spiritual growth, and serve our community with compassion and purpose.') }}</h3>
+                                            <p class="wow fadeInUp" data-wow-delay="0.5s">{{ content('about', 'vision_mission', 'vision_description', 'Our vision is to serve our community with compassion, love unconditionally, and foster spiritual growth. Through dedicated service, heartfelt worship, and supportive fellowship, we strive to create a nurturing environment where individuals can deepen their faith, connect with others, and make a positive impact. Join us as we live out our commitment to serve, love, and grow together.') }}</p>
                                         </div>
                                         <!-- Vision Mission Body End -->
                                     </div>
@@ -159,7 +159,7 @@
                                     <!-- Vision Mission Image Start -->
                                     <div class="vision-mission-image">
                                         <figure class="image-anime reveal">
-                                            <img src="{{ asset('assets/images/our-vision-img.jpg') }}" alt="">
+                                            <img src="{{ content_image('about', 'vision_mission', 'vision_image', 'our-vision-img.jpg') }}" alt="">
                                         </figure>
                                     </div>
                                     <!-- Vision Mission Image End -->
@@ -176,15 +176,15 @@
                                     <div class="vision-mission-content">
                                         <!-- Section Title Start -->
                                         <div class="section-title">
-                                            <h3>our mission</h3>
-                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Our Vision to Serve, <span>Love, and Grow</span></h2>
+                                            <h3>{{ content('about', 'vision_mission', 'mission_subtitle', 'our mission') }}</h3>
+                                            <h2 class="text-anime-style-2" data-cursor="-opaque">{!! content('about', 'vision_mission', 'mission_title', 'Our Vision to Serve, <span>Love, and Grow</span>') !!}</h2>
                                         </div>
                                         <!-- Section Title End -->
 
                                         <!-- Vision Mission Body Start -->
                                         <div class="vision-mission-body">
-                                            <h3>Our mission is to share God's love, foster spiritual growth, and serve our community with compassion and purpose.</h3>
-                                            <p>Our vision is to serve our community with compassion, love unconditionally, and foster spiritual growth. Through dedicated service, heartfelt worship, and supportive fellowship, we strive to create a nurturing environment where individuals can deepen their faith, connect with others, and make a positive impact. Join us as we live out our commitment to serve, love, and grow together.</p>
+                                            <h3>{{ content('about', 'vision_mission', 'mission_headline', 'Our mission is to share God\'s love, foster spiritual growth, and serve our community with compassion and purpose.') }}</h3>
+                                            <p>{{ content('about', 'vision_mission', 'mission_description', 'Our vision is to serve our community with compassion, love unconditionally, and foster spiritual growth. Through dedicated service, heartfelt worship, and supportive fellowship, we strive to create a nurturing environment where individuals can deepen their faith, connect with others, and make a positive impact. Join us as we live out our commitment to serve, love, and grow together.') }}</p>
                                         </div>
                                         <!-- Vision Mission Body End -->
                                     </div>
@@ -195,7 +195,7 @@
                                     <!-- Vision Mission Image Start -->
                                     <div class="vision-mission-image">
                                         <figure class="image-anime reveal">
-                                            <img src="{{ asset('assets/images/our-mission-img.jpg') }}" alt="">
+                                            <img src="{{ content_image('about', 'vision_mission', 'mission_image', 'our-mission-img.jpg') }}" alt="">
                                         </figure>
                                     </div>
                                     <!-- Vision Mission Image End -->
@@ -212,15 +212,15 @@
                                     <div class="vision-mission-content">
                                         <!-- Section Title Start -->
                                         <div class="section-title">
-                                            <h3>our approach</h3>
-                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Our Vision to Serve, <span>Love, and Grow</span></h2>
+                                            <h3>{{ content('about', 'vision_mission', 'approach_subtitle', 'our approach') }}</h3>
+                                            <h2 class="text-anime-style-2" data-cursor="-opaque">{!! content('about', 'vision_mission', 'approach_title', 'Our Vision to Serve, <span>Love, and Grow</span>') !!}</h2>
                                         </div>
                                         <!-- Section Title End -->
 
                                         <!-- Vision Mission Body Start -->
                                         <div class="vision-mission-body">
-                                            <h3>Our approach is to share God's love, foster spiritual growth, and serve our community with compassion and purpose.</h3>
-                                            <p>Our approach is to serve our community with compassion, love unconditionally, and foster spiritual growth. Through dedicated service, heartfelt worship, and supportive fellowship, we strive to create a nurturing environment where individuals can deepen their faith, connect with others, and make a positive impact. Join us as we live out our commitment to serve, love, and grow together.</p>
+                                            <h3>{{ content('about', 'vision_mission', 'approach_headline', 'Our approach is to share God\'s love, foster spiritual growth, and serve our community with compassion and purpose.') }}</h3>
+                                            <p>{{ content('about', 'vision_mission', 'approach_description', 'Our approach is to serve our community with compassion, love unconditionally, and foster spiritual growth. Through dedicated service, heartfelt worship, and supportive fellowship, we strive to create a nurturing environment where individuals can deepen their faith, connect with others, and make a positive impact. Join us as we live out our commitment to serve, love, and grow together.') }}</p>
                                         </div>
                                         <!-- Vision Mission Body End -->
                                     </div>
@@ -231,7 +231,7 @@
                                     <!-- Vision Mission Image Start -->
                                     <div class="vision-mission-image">
                                         <figure class="image-anime reveal">
-                                            <img src="{{ asset('assets/images/our-approach-img.jpg') }}" alt="">
+                                            <img src="{{ content_image('about', 'vision_mission', 'approach_image', 'our-approach-img.jpg') }}" alt="">
                                         </figure>
                                     </div>
                                     <!-- Vision Mission Image End -->
@@ -256,14 +256,14 @@
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">350</span>+</h2>
+                            <h2><span class="counter">{{ content('about', 'about_counter', 'counter_1_number', '350') }}</span>+</h2>
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">
-                            <h3>oldest member</h3>
-                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                            <h3>{{ content('about', 'about_counter', 'counter_1_title', 'oldest member') }}</h3>
+                            <p>{{ content('about', 'about_counter', 'counter_1_description', 'Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.') }}</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -275,14 +275,14 @@
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">98</span>+</h2>
+                            <h2><span class="counter">{{ content('about', 'about_counter', 'counter_2_number', '98') }}</span>+</h2>
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">                            
-                            <h3>youth retreats</h3>
-                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                            <h3>{{ content('about', 'about_counter', 'counter_2_title', 'youth retreats') }}</h3>
+                            <p>{{ content('about', 'about_counter', 'counter_2_description', 'Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.') }}</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -294,14 +294,14 @@
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">148</span>+</h2>                            
+                            <h2><span class="counter">{{ content('about', 'about_counter', 'counter_3_number', '148') }}</span>+</h2>                            
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">
-                            <h3>tech workshops</h3>
-                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                            <h3>{{ content('about', 'about_counter', 'counter_3_title', 'tech workshops') }}</h3>
+                            <p>{{ content('about', 'about_counter', 'counter_3_description', 'Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.') }}</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -313,14 +313,14 @@
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">58</span>+</h2>
+                            <h2><span class="counter">{{ content('about', 'about_counter', 'counter_4_number', '58') }}</span>+</h2>
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">
-                            <h3>christmas concert</h3>
-                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                            <h3>{{ content('about', 'about_counter', 'counter_4_title', 'christmas concert') }}</h3>
+                            <p>{{ content('about', 'about_counter', 'counter_4_description', 'Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.') }}</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -338,8 +338,8 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">what we do</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Living Our <span>Faith Together</span></h2>
+                        <h3 class="wow fadeInUp">{{ content('about', 'what_we_do', 'subtitle', 'what we do') }}</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">{!! content('about', 'what_we_do', 'title', 'Living Our <span>Faith Together</span>') !!}</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -353,8 +353,8 @@
                             <img src="{{ asset('assets/images/icon-what-we-1.svg') }}" alt="">
                         </div>
                         <div class="what-we-content">
-                            <h3>worship services</h3>
-                            <p>Experience spiritual growth and meaningful connection through heartfelt worship and fellowship. Everyone is welcome to join us</p>
+                            <h3>{{ content('about', 'what_we_do', 'service_1_title', 'worship services') }}</h3>
+                            <p>{{ content('about', 'what_we_do', 'service_1_description', 'Experience spiritual growth and meaningful connection through heartfelt worship and fellowship. Everyone is welcome to join us') }}</p>
                         </div>
                     </div>
                     <!-- What We Item End -->
@@ -367,8 +367,8 @@
                             <img src="{{ asset('assets/images/icon-what-we-2.svg') }}" alt="">
                         </div>
                         <div class="what-we-content">
-                            <h3>community outreach</h3>
-                            <p>Experience spiritual growth and meaningful connection through heartfelt worship and fellowship. Everyone is welcome to join us</p>
+                            <h3>{{ content('about', 'what_we_do', 'service_2_title', 'community outreach') }}</h3>
+                            <p>{{ content('about', 'what_we_do', 'service_2_description', 'Experience spiritual growth and meaningful connection through heartfelt worship and fellowship. Everyone is welcome to join us') }}</p>
                         </div>
                     </div>
                     <!-- What We Item End -->
@@ -381,8 +381,8 @@
                             <img src="{{ asset('assets/images/icon-what-we-3.svg') }}" alt="">
                         </div>
                         <div class="what-we-content">
-                            <h3>educational programs</h3>
-                            <p>Experience spiritual growth and meaningful connection through heartfelt worship and fellowship. Everyone is welcome to join us</p>
+                            <h3>{{ content('about', 'what_we_do', 'service_3_title', 'educational programs') }}</h3>
+                            <p>{{ content('about', 'what_we_do', 'service_3_description', 'Experience spiritual growth and meaningful connection through heartfelt worship and fellowship. Everyone is welcome to join us') }}</p>
                         </div>
                     </div>
                     <!-- What We Item End -->
@@ -399,8 +399,8 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">our team</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Meet Our <span>Pastors</span></h2>
+                        <h3 class="wow fadeInUp">{{ content('about', 'our_team', 'subtitle', 'our team') }}</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">{!! content('about', 'our_team', 'title', 'Meet Our <span>Pastors</span>') !!}</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -413,16 +413,24 @@
                         <!-- Team Image Start -->
                         <div class="team-image">
                             <figure class="image-anime">
-                                <img src="{{ asset('assets/images/team-1.jpg') }}" alt="">
+                                <img src="{{ content_image('about', 'our_team', 'member_1_image', 'team-1.jpg') }}" alt="">
                             </figure>
                 
                             <!-- Team Social Icon Start -->
                             <div class="team-social-icon">
                                 <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    @if(content('about', 'our_team', 'member_1_facebook'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_1_facebook') }}" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_1_linkedin'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_1_linkedin') }}" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_1_instagram'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_1_instagram') }}" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_1_twitter'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_1_twitter') }}" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    @endif
                                 </ul>
                             </div>
                             <!-- Team Social Icon End -->
@@ -431,8 +439,8 @@
                 
                         <!-- Team Content Start -->
                         <div class="team-content">
-                            <h3>darlene robertson</h3>
-                            <p>head of worship team</p>
+                            <h3>{{ content('about', 'our_team', 'member_1_name', 'darlene robertson') }}</h3>
+                            <p>{{ content('about', 'our_team', 'member_1_role', 'head of worship team') }}</p>
                         </div>
                         <!-- Team Content End -->
                     </div>
@@ -445,16 +453,24 @@
                         <!-- Team Image Start -->
                         <div class="team-image">
                             <figure class="image-anime">
-                                <img src="{{ asset('assets/images/team-2.jpg') }}" alt="">
+                                <img src="{{ content_image('about', 'our_team', 'member_2_image', 'team-2.jpg') }}" alt="">
                             </figure>
                 
                             <!-- Team Social Icon Start -->
                             <div class="team-social-icon">
                                 <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    @if(content('about', 'our_team', 'member_2_facebook'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_2_facebook') }}" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_2_linkedin'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_2_linkedin') }}" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_2_instagram'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_2_instagram') }}" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_2_twitter'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_2_twitter') }}" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    @endif
                                 </ul>
                             </div>
                             <!-- Team Social Icon End -->
@@ -463,8 +479,8 @@
                 
                         <!-- Team Content Start -->
                         <div class="team-content">
-                            <h3>sophia simmons </h3>
-                            <p>pastor</p>
+                            <h3>{{ content('about', 'our_team', 'member_2_name', 'sophia simmons') }}</h3>
+                            <p>{{ content('about', 'our_team', 'member_2_role', 'pastor') }}</p>
                         </div>
                         <!-- Team Content End -->
                     </div>
@@ -477,16 +493,24 @@
                         <!-- Team Image Start -->
                         <div class="team-image">
                             <figure class="image-anime">
-                                <img src="{{ asset('assets/images/team-3.jpg') }}" alt="">
+                                <img src="{{ content_image('about', 'our_team', 'member_3_image', 'team-3.jpg') }}" alt="">
                             </figure>
                 
                             <!-- Team Social Icon Start -->
                             <div class="team-social-icon">
                                 <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    @if(content('about', 'our_team', 'member_3_facebook'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_3_facebook') }}" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_3_linkedin'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_3_linkedin') }}" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_3_instagram'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_3_instagram') }}" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_3_twitter'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_3_twitter') }}" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    @endif
                                 </ul>
                             </div>
                             <!-- Team Social Icon End -->
@@ -495,8 +519,8 @@
                 
                         <!-- Team Content Start -->
                         <div class="team-content">
-                            <h3>savannah nguyen</h3>
-                            <p>head of worship team</p>
+                            <h3>{{ content('about', 'our_team', 'member_3_name', 'savannah nguyen') }}</h3>
+                            <p>{{ content('about', 'our_team', 'member_3_role', 'head of worship team') }}</p>
                         </div>
                         <!-- Team Content End -->
                     </div>
@@ -509,16 +533,24 @@
                         <!-- Team Image Start -->
                         <div class="team-image">
                             <figure class="image-anime">
-                                <img src="{{ asset('assets/images/team-4.jpg') }}" alt="">
+                                <img src="{{ content_image('about', 'our_team', 'member_4_image', 'team-4.jpg') }}" alt="">
                             </figure>
                 
                             <!-- Team Social Icon Start -->
                             <div class="team-social-icon">
                                 <ul>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    @if(content('about', 'our_team', 'member_4_facebook'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_4_facebook') }}" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_4_linkedin'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_4_linkedin') }}" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_4_instagram'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_4_instagram') }}" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
+                                    @endif
+                                    @if(content('about', 'our_team', 'member_4_twitter'))
+                                    <li><a href="{{ content('about', 'our_team', 'member_4_twitter') }}" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    @endif
                                 </ul>
                             </div>
                             <!-- Team Social Icon End -->
@@ -527,8 +559,8 @@
                 
                         <!-- Team Content Start -->
                         <div class="team-content">
-                            <h3>charlotte wilson</h3>
-                            <p>head of worship team</p>
+                            <h3>{{ content('about', 'our_team', 'member_4_name', 'charlotte wilson') }}</h3>
+                            <p>{{ content('about', 'our_team', 'member_4_role', 'head of worship team') }}</p>
                         </div>
                         <!-- Team Content End -->
                     </div>
@@ -547,7 +579,7 @@
                     <!-- Pastors Image Start -->
                     <div class="pastors-image">
                         <figure class="image-anime reveal">
-                            <img src="{{ asset('assets/images/pastors-image.jpg') }}" alt="">
+                            <img src="{{ content_image('about', 'pastors_message', 'pastor_image', 'pastors-image.jpg') }}" alt="">
                         </figure>
                     </div>
                     <!-- Pastors Image End -->
@@ -558,15 +590,15 @@
                     <div class="pastors-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">pastors message</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Your generosity makes a <span>profound impact</span></h2>
+                            <h3 class="wow fadeInUp">{{ content('about', 'pastors_message', 'subtitle', 'pastors message') }}</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">{!! content('about', 'pastors_message', 'title', 'Your generosity makes a <span>profound impact</span>') !!}</h2>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- Pastors Comtent Body Start -->
                         <div class="pastors-content-body">
-                            <h3 class="wow fadeInUp" data-wow-delay="0.25s">Our mission is to share God's love, foster spiritual growth, and serve our community with compassion and purpose.</h3>
-                            <p class="wow fadeInUp" data-wow-delay="0.5s">We would love to get to know you better. Feel free to reach out to us through our Contact Us page, or join us for one of our upcoming services or events. Our doors are always open, and we look forward to welcoming you into our church family.</p>
+                            <h3 class="wow fadeInUp" data-wow-delay="0.25s">{{ content('about', 'pastors_message', 'headline', 'Our mission is to share God\'s love, foster spiritual growth, and serve our community with compassion and purpose.') }}</h3>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s">{{ content('about', 'pastors_message', 'description', 'We would love to get to know you better. Feel free to reach out to us through our Contact Us page, or join us for one of our upcoming services or events. Our doors are always open, and we look forward to welcoming you into our church family.') }}</p>
                         </div>
                         <!-- Pastors Comtent Body End -->
 
@@ -574,13 +606,13 @@
                         <div class="pastors-signature">
                             <!-- Pastors Signature Image Start -->
                             <div class="pastors-signature-img">
-                                <img src="{{ asset('assets/images/pastors-signature.svg') }}" alt="">
+                                <img src="{{ content_image('about', 'pastors_message', 'signature_image', 'pastors-signature.svg') }}" alt="">
                             </div>
                             <!-- Pastors Signature Image End -->
 
                             <!-- Pastors Signature Comtent Start -->
                             <div class="pastors-signature-content">
-                                <p>senior pastor</p>
+                                <p>{{ content('about', 'pastors_message', 'signature_title', 'senior pastor') }}</p>
                             </div>
                             <!-- Pastors Signature Comtent End -->
                         </div>
@@ -600,8 +632,8 @@
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">our core value</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Foundations of Our Faith and <span>Community Life</span></h2>
+                        <h3 class="wow fadeInUp">{{ content('about', 'core_values', 'subtitle', 'our core value') }}</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">{!! content('about', 'core_values', 'title', 'Foundations of Our Faith and <span>Community Life</span>') !!}</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -616,13 +648,13 @@
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Why is faith a core value?
+                                    {{ content('about', 'core_values', 'faq_1_question', 'Why is faith a core value?') }}
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>We demonstrate love through compassionate service, supportive relationships, and inclusive community practices.</p>
+                                    <p>{{ content('about', 'core_values', 'faq_1_answer', 'We demonstrate love through compassionate service, supportive relationships, and inclusive community practices.') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -633,13 +665,13 @@
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How does the church demonstrate love?
+                                    {{ content('about', 'core_values', 'faq_2_question', 'How does the church demonstrate love?') }}
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>We demonstrate love through compassionate service, supportive relationships, and inclusive community practices.</p>
+                                    <p>{{ content('about', 'core_values', 'faq_2_answer', 'We demonstrate love through compassionate service, supportive relationships, and inclusive community practices.') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -650,13 +682,13 @@
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    How is community fostered within the church?
+                                    {{ content('about', 'core_values', 'faq_3_question', 'How is community fostered within the church?') }}
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>We demonstrate love through compassionate service, supportive relationships, and inclusive community practices.</p>
+                                    <p>{{ content('about', 'core_values', 'faq_3_answer', 'We demonstrate love through compassionate service, supportive relationships, and inclusive community practices.') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -667,13 +699,13 @@
                             <h2 class="accordion-header" id="headingfour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-                                    What is the importance of spiritual growth?
+                                    {{ content('about', 'core_values', 'faq_4_question', 'What is the importance of spiritual growth?') }}
                                 </button>
                             </h2>
                             <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour"
                                 data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>We demonstrate love through compassionate service, supportive relationships, and inclusive community practices.</p>
+                                    <p>{{ content('about', 'core_values', 'faq_4_answer', 'We demonstrate love through compassionate service, supportive relationships, and inclusive community practices.') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -684,13 +716,13 @@
                             <h2 class="accordion-header" id="headingfive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-                                    How do these values shape church activities?
+                                    {{ content('about', 'core_values', 'faq_5_question', 'How do these values shape church activities?') }}
                                 </button>
                             </h2>
                             <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive"
                                 data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>We demonstrate love through compassionate service, supportive relationships, and inclusive community practices.</p>
+                                    <p>{{ content('about', 'core_values', 'faq_5_answer', 'We demonstrate love through compassionate service, supportive relationships, and inclusive community practices.') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -704,35 +736,45 @@
                     <div class="core-value-slider">
                         <div class="swiper">
                             <div class="swiper-wrapper">
-                                <!-- Core Value Image Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="core-value-slider-img">
-                                        <figure class="image-anime">
-                                            <img src="{{ asset('assets/images/core-value-img.jpg') }}" alt="">
-                                        </figure>
+                                @php
+                                    $sliderImages = content('about', 'core_values', 'slider_images', []);
+                                @endphp
+                                @if(!empty($sliderImages) && is_array($sliderImages))
+                                    @foreach($sliderImages as $image)
+                                    <!-- Core Value Image Slide Start -->
+                                    <div class="swiper-slide">
+                                        <div class="core-value-slider-img">
+                                            <figure class="image-anime">
+                                                <img src="{{ asset('storage/' . $image) }}" alt="">
+                                            </figure>
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- Core Value Image Slide End -->
-
-                                <!-- Core Value Image Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="core-value-slider-img">
-                                        <figure class="image-anime">
-                                            <img src="{{ asset('assets/images/core-value-img.jpg') }}" alt="">
-                                        </figure>
+                                    <!-- Core Value Image Slide End -->
+                                    @endforeach
+                                @else
+                                    <!-- Default slides when no images uploaded -->
+                                    <div class="swiper-slide">
+                                        <div class="core-value-slider-img">
+                                            <figure class="image-anime">
+                                                <img src="{{ asset('assets/images/core-value-img.jpg') }}" alt="">
+                                            </figure>
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- Core Value Image Slide End -->
-
-                                <!-- Core Value Image Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="core-value-slider-img">
-                                        <figure class="image-anime">
-                                            <img src="{{ asset('assets/images/core-value-img.jpg') }}" alt="">
-                                        </figure>
+                                    <div class="swiper-slide">
+                                        <div class="core-value-slider-img">
+                                            <figure class="image-anime">
+                                                <img src="{{ asset('assets/images/core-value-img.jpg') }}" alt="">
+                                            </figure>
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- Core Value Image Slide End -->
+                                    <div class="swiper-slide">
+                                        <div class="core-value-slider-img">
+                                            <figure class="image-anime">
+                                                <img src="{{ asset('assets/images/core-value-img.jpg') }}" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                @endif
                             </div>
                             <div class="core-value-btn">
                                 <div class="core-value-button-prev"></div>

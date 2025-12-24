@@ -6,7 +6,7 @@
 @include('sections.live-hero')
 
     <!-- Page Sermons Start -->
-    <div class="page-sermons">
+    <div class="page-sermons" id="live-sermons">
         <div class="container">
             <div class="row">
                 @foreach($pageSermons as $sermon)

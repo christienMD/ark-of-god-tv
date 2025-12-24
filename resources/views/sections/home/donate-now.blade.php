@@ -6,7 +6,7 @@
                     <div class="intro-video-box">
                         <!-- Video Play Button Start -->
                         <div class="video-play-button">
-                            <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
+                            <a href="{{ content('home', 'donate_now', 'video_url', 'https://www.youtube.com/watch?v=Y-x0efG1seA') }}" class="popup-video" data-cursor-text="Play">
                                 <i class="fa-solid fa-play"></i>
                             </a>
                         </div>
@@ -19,9 +19,9 @@
                     <div class="donate-box">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">donate now</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Support <span>Our Mission</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">Your generous support enables to continue its mission of spreading God's love and serving our community.</p>
+                            <h3 class="wow fadeInUp">{{ content('home', 'donate_now', 'subtitle', 'donate now') }}</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">{{ content('home', 'donate_now', 'title', 'Support Our Mission') }}</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">{{ content('home', 'donate_now', 'description', 'Your generous support enables to continue its mission of spreading God\'s love and serving our community.') }}</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -64,7 +64,7 @@
                                 </fieldset>
 
                                 <div class="form-group-btn">
-                                    <button type="submit" class="btn-default">donate now</button>
+                                    <button type="submit" class="btn-default">{{ content('home', 'donate_now', 'button_text', 'donate now') }}</button>
                                 </div>
                             </form>
                         </div>

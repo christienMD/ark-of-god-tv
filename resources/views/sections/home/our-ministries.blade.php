@@ -4,8 +4,8 @@
             <div class="row section-row">
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h3 class="wow fadeInUp">branches</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque">Our Global <span>Branches</span></h2>
+                    <h3 class="wow fadeInUp">{{ content('home', 'our_ministries', 'subtitle', 'branches') }}</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">{{ content('home', 'our_ministries', 'title', 'Our Global Branches') }}</h2>
                 </div>
                 <!-- Section Title End -->
             </div>
@@ -43,7 +43,7 @@
 
                 <div class="col-lg-12">
                     <div class="our-ministries-footer wow fadeInUp" data-wow-delay="0.75s">
-                        <p>Explore the exciting new ways we are serving our community and growing together in faith with our latest ministry initiatives. <a href="{{ route('branches.index') }}">View All Branches</a></p>
+                        <p>{{ content('home', 'our_ministries', 'footer_text', 'Explore the exciting new ways we are serving our community and growing together in faith with our latest ministry initiatives.') }} <a href="{{ route('branches.index') }}">View All Branches</a></p>
                     </div>
                 </div>
             </div>

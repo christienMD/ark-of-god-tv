@@ -7,13 +7,13 @@
                     <div class="about-image">
                         <div class="about-img-1">
                             <figure class="image-anime reveal">
-                                <img src="{{ asset('assets/images/touching1.jpeg') }}" alt="">
+                                <img src="{{ content_image('home', 'about', 'image_1') ?? asset('assets/images/touching1.jpeg') }}" alt="">
                             </figure>
                         </div>
 
                         <div class="about-img-2">
                             <figure class="image-anime reveal">
-                                <img src="{{ asset('assets/images/touching2.jpg') }}" alt="">
+                                <img src="{{ content_image('home', 'about', 'image_2') ?? asset('assets/images/touching2.jpg') }}" alt="">
                             </figure>
                         </div>
                     </div>
@@ -25,10 +25,10 @@
                     <div class="about-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">about us</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Touching lives across all <span>nations and cultures</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">Ark of God's Covenant Ministry (AGCOM) is a global ministry founded by Apostle John Chi, dedicated to teaching, preaching, healing, and deliverance. We are committed to spreading the transformative message of God's love and power to every nation and generation.</p>
-                            <p class="wow fadeInUp" data-wow-delay="0.5s">Our ministry creates a welcoming environment where people from diverse backgrounds can experience God's grace, discover their heavenly citizenship, and walk in divine empowerment through powerful revelation and the manifestation of His love.</p>
+                            <h3 class="wow fadeInUp">{{ content('home', 'about', 'subtitle', 'about us') }}</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">{{ content('home', 'about', 'title', 'Touching lives across all nations and cultures') }}</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">{{ content('home', 'about', 'description_1', 'Ark of God\'s Covenant Ministry (AGCOM) is a global ministry founded by Apostle John Chi, dedicated to teaching, preaching, healing, and deliverance. We are committed to spreading the transformative message of God\'s love and power to every nation and generation.') }}</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s">{{ content('home', 'about', 'description_2', 'Our ministry creates a welcoming environment where people from diverse backgrounds can experience God\'s grace, discover their heavenly citizenship, and walk in divine empowerment through powerful revelation and the manifestation of His love.') }}</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -40,7 +40,7 @@
                                     <img src="{{ asset('assets/images/icon-about-list-1.svg') }}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>teaching & preaching</h3>
+                                    <h3>{{ content('home', 'about', 'feature_1', 'teaching & preaching') }}</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -51,7 +51,7 @@
                                     <img src="{{ asset('assets/images/icon-about-list-2.svg') }}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>healing & deliverance</h3>
+                                    <h3>{{ content('home', 'about', 'feature_2', 'healing & deliverance') }}</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -62,7 +62,7 @@
                                     <img src="{{ asset('assets/images/icon-about-list-3.svg') }}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>global impact</h3>
+                                    <h3>{{ content('home', 'about', 'feature_3', 'global impact') }}</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -73,7 +73,7 @@
                                     <img src="{{ asset('assets/images/icon-about-list-4.svg') }}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>transformative love</h3>
+                                    <h3>{{ content('home', 'about', 'feature_4', 'transformative love') }}</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -83,7 +83,7 @@
 
                         <!-- About Us Footer Start -->
                         <div class="about-us-footer wow fadeInUp" data-wow-delay="1s">
-                            <a href="#" class="btn-default">read more about us</a>
+                            <a href="{{ route('about') }}" class="btn-default">read more about us</a>
                         </div>
                         <!-- About Us Footer End -->
                     </div>

@@ -1,10 +1,10 @@
    <!-- Hero Section Start -->
    <div class="hero hero-video">
         <!-- Video Start -->
-        <div class="hero-bg-video" style="background-image: url('{{ asset('assets/images/hero1.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="hero-bg-video" style="background-image: url('{{ content_image('home', 'hero', 'background_image') ?? asset('assets/images/hero1.jpg') }}'); background-size: cover; background-position: center;">
             <!-- Selfhosted Video Start -->
             <video autoplay muted loop playsinline id="myVideo">
-                <source src="https://video.wixstatic.com/video/18723e_b0e2a445873c425c9fa4c12aab1f89dd/720p/mp4/file.mp4" type="video/mp4">
+                <source src="{{ content('home', 'hero', 'video_url', 'https://video.wixstatic.com/video/18723e_b0e2a445873c425c9fa4c12aab1f89dd/720p/mp4/file.mp4') }}" type="video/mp4">
             </video>
             <!-- Selfhosted Video End -->
 
@@ -20,16 +20,16 @@
                     <div class="hero-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">Apostle John Chi</h3>
-                            <h1 class="text-anime-style-2" data-cursor="-opaque">Taking the light to every nation, every generation</h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">Experience powerful revelation, overwhelming grace, and divine encounters that transform lives across the globe through Apostle John Chi.</p>
+                            <h3 class="wow fadeInUp">{{ content('home', 'hero', 'subtitle', 'Apostle John Chi') }}</h3>
+                            <h1 class="text-anime-style-2" data-cursor="-opaque">{{ content('home', 'hero', 'title', 'Taking the light to every nation, every generation') }}</h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s">{{ content('home', 'hero', 'description', 'Experience powerful revelation, overwhelming grace, and divine encounters that transform lives across the globe through Apostle John Chi.') }}</p>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- Hero Content Body Start -->
                         <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
-                            <a href="#" class="btn-default"><span>join in person</span></a>
-                            <a href="#" class="btn-default btn-highlighted"><span>donate now</span></a>
+                            <a href="{{ route('visit') }}" class="btn-default"><span>{{ content('home', 'hero', 'button_1_text', 'join in person') }}</span></a>
+                            <a href="{{ route('give') }}" class="btn-default btn-highlighted"><span>{{ content('home', 'hero', 'button_2_text', 'donate now') }}</span></a>
                         </div>
                         <!-- Hero Content Body End -->
                     </div>

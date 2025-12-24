@@ -4,7 +4,7 @@
 
 <main>
 @include('sections.page-header', [
-    'title' => 'Branches',
+    'title' => content('branches', 'page_header', 'title', 'Our Global Branches'),
     'breadcrumb' => 'branches',
     'backgroundImage' => 'hero-3.jpg'
 ])
